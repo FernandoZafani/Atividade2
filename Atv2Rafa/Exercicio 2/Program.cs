@@ -3,7 +3,7 @@
 namespace Projeto {
 	class Program {
 		static void Main(string[] args) {
-			using (SKBitmap bitmapEntrada = SKBitmap.Decode("C:\\Users\\fernando.filho\\Desktop\\Atv2Rafa\Exercicio 2\entrada\\lenna.png"),
+			using (SKBitmap bitmapEntrada = SKBitmap.Decode("lenna.png"),
 				bitmapSaida = new SKBitmap(new SKImageInfo(bitmapEntrada.Width, bitmapEntrada.Height, SKColorType.Gray8))) {
 					
 				static void Brilho(byte r, byte g, byte b, out byte saida) {
@@ -50,7 +50,7 @@ namespace Projeto {
 						}							
 					}
 					unsafe{
-						using (FileStream stream = new FileStream("C:\\Users\\fernando.filho\\desktop\\Atv2Rafa\\Exercicio 2\\entradaExercicio2Saida.png", FileMode.OpenOrCreate, FileAccess.Write)) {
+						using (FileStream stream = new FileStream("entradaExercicio2Saida.png", FileMode.OpenOrCreate, FileAccess.Write)) {
 							bitmapSaida.Encode(stream, SKEncodedImageFormat.Png, 100);
 						}
 					}
