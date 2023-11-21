@@ -4,7 +4,7 @@ namespace Projeto {
 	class Program {
 		static void Main(string[] args) {
 
-			using (SKBitmap bitmapEntrada = SKBitmap.Decode("C:\\Users\\fernando.filho\\Desktop\\Atv2Rafa\Exercicio 3\entrada\\Exercicio 3.png")){
+			using (SKBitmap bitmapEntrada = SKBitmap.Decode("Exercicio 3.png")){
 				
 				unsafe {
 					byte* entr = (byte*)bitmapEntrada.GetPixels();		
